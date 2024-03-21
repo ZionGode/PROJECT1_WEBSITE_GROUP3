@@ -2,6 +2,14 @@ body div {
 font-family: "Lato", sans-serif;
 }
 
+#logo {
+    font-weight: 600;
+}
+
+#logo:hover {
+    color: #064749;
+}
+
 #category {
     font-weight: 550;
 }
