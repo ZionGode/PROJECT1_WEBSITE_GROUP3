@@ -1,4 +1,11 @@
+body div {
+font-family: "Lato", sans-serif;
+}
+
+#category {
+    font-weight: 550;
+}
+
 #category:hover {
-  color: #064749;
-  font-weight: 700;
+    color: #064749;
 }
