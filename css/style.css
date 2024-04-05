@@ -17,3 +17,10 @@ font-family: "Lato", sans-serif;
 #category:hover {
     color: #064749;
 }
+
+/* Owl Carousel */
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
