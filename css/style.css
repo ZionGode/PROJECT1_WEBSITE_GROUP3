@@ -1,68 +1,121 @@
 body div {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .nav-item {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #logo {
-    font-size: 60px;
-    font-weight: 600;
+  font-size: 60px;
+  font-weight: 600;
 }
 
 #logo:hover {
-    color: #064749;
+  color: #064749;
 }
 
 #category {
-    font-size: 18px;
-    font-weight: 550;
-    padding-left: 20px;
-    padding-right: 20px;
+  font-size: 18px;
+  font-weight: 550;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #category:hover {
-    color: #064749;
+  color: #064749;
 }
 
 /* Owl Carousel */
 .owl-carousel .item {
-    width: 100%;
-    height: 750px;
-    overflow: hidden;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
 }
 
-#owl-demo .item img{
+#owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
+.carousel-wrapper {
+  position: relative;
+}
+
+#card-carousel {
+  position: absolute;
+  width: 30vw; /* Adjust based on viewport width */
+  max-width: 18rem; /* Maximum size */
+  min-height: 8rem;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  overflow: hidden; /* Ensures content fits in the card */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional styling */
+}
+
+#card-carousel h1 {
+  font-weight: 700;
+}
+
+#card-carousel .card-body {
+  padding: 2vw;
+}
+
+#card-carousel .card-text {
+  font-size: 1.2vw;
+}
+
+@media (max-width: 1024px) {
+  #card-carousel {
+    width: 25vw;
+    top: 35%;
+  }
+}
+
+/* Adjust sizes for smaller screens */
+@media (max-width: 768px) {
+  #card-carousel {
+    width: 30vw; /* Larger percentage for smaller screens */
+    max-width: none; /* Allows card to grow */
+    top: 22%;
+  }
+
+  #card-carousel h1 {
+    font-size: 4vw; /* Larger font for smaller screens */
+  }
+
+  #card-carousel .card-text {
+    font-size: 2vw;
+  }
+}
 /* Card */
 .card-body {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-primary {
-    background-color: #064749 !important;
-    border-color: #064749 !important;
+  background-color: #064749 !important;
+  border-color: #064749 !important;
 }
 
 .btn-primary:hover {
-    background-color: #053b3d !important;
-    border-color: #053b3d !important;
+  background-color: #053b3d !important;
+  border-color: #053b3d !important;
 }
 
 .btn-outline-primary {
-    color: #064749 !important;
-    background-color: #fff !important;
-    border-color: #064749 !important;
+  color: #064749 !important;
+  background-color: #fff !important;
+  border-color: #064749 !important;
 }
 
 .btn-outline-primary:hover {
-    color: #fff !important;
-    background-color: #064749 !important;
-    border-color: #064749 !important;
+  color: #fff !important;
+  background-color: #064749 !important;
+  border-color: #064749 !important;
 }
