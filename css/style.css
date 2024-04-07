@@ -75,10 +75,18 @@ body div {
     width: 25vw;
     top: 35%;
   }
+
+  #card-carousel h1 {
+    font-size: 3vw; /* Larger font for smaller screens */
+  }
+
+  #card-carousel .card-text {
+    font-size: 1.5vw;
+  }
 }
 
 /* Adjust sizes for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
   #card-carousel {
     width: 30vw; /* Larger percentage for smaller screens */
     max-width: none; /* Allows card to grow */
