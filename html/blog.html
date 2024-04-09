@@ -216,73 +216,74 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light py-4">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <!-- Footer content -->
+        <div class="row pt-3 pb-3">
+          <!-- First column for contact, copyright, and social links -->
+          <div class="col-md-3" id="copyright">
+            <!-- <br /> -->
+            <h6>Dream Rentals</h6>
+            <h6>© 2024</h6>
+            <!-- Social media icons -->
+            <a href="#"><i class="fab fa-linkedin fa-2x" id="footer-icon"></i></a>
+            <a href="#"><i class="fab fa-facebook-square fa-2x" id="footer-icon"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x" id="footer-icon"></i></a>
+          </div>
+          <!-- Second column for Company, Guests, and Privacy links -->
+          <div class="col-md-5">
+            <div class="row">
+              <!-- Company links -->
+              <div class="col-md-4">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="footer-link">Home</a></li>
+                  <li><a href="#" class="footer-link">About us</a></li>
+                  <li><a href="#" class="footer-link">Our team</a></li>
+                </ul>
+              </div>
+              <!-- Guests links -->
+              <div class="col-md-3">
+                <h5>Guests</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="footer-link">Blog</a></li>
+                  <li><a href="#" class="footer-link">FAQ</a></li>
+                  <li><a href="#" class="footer-link">Career</a></li>
+                </ul>
+              </div>
+              <!-- Privacy links -->
+              <div class="col-md-4">
+                <h5>Privacy</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="footer-link">Terms of Service</a></li>
+                  <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Third column for the newsletter subscription -->
+          <div class="col-md-4">
+            <h5>Stay up to date</h5>
+            <p>Be the first to know about our newest apartments.</p>
+            <!-- Newsletter form -->
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                  aria-label="Email address"
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
-
-    <div class="container main-container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="mb-3">
-            <span class="fw-bold">Stay up to date</span>
-            <span>Be the first to know about our newest apartments</span>
-          </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text custom-secondary">Email address</span>
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Enter email"
-            />
-          </div>
-          <button type="button" class="btn btn-primary custom-primary">
-            Subscribe
-          </button>
-        </div>
-        <div class="col-md-8">
-          <div class="row">
-            <div class="col-md-3">
-              <span class="fw-bold">Company</span>
-              <span>Home</span>
-              <span>About us</span>
-              <span>Our team</span>
-            </div>
-            <div class="col-md-3">
-              <span class="fw-bold">Guests</span>
-              <span>Blog</span>
-              <span>FAQ</span>
-              <span>Career</span>
-            </div>
-            <div class="col-md-3">
-              <span class="fw-bold">Privacy</span>
-              <span>Terms of Service</span>
-              <span>Privacy Policy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <span>Contact number:</span>
-          <div class="d-flex">
-            <div class="me-2">
-              <i class="bi bi-facebook" aria-hidden="true"></i>
-            </div>
-            <div class="me-2">
-              <img src="./assets/images/2.png" alt="Logo" />
-            </div>
-            <div>
-              <img src="./assets/images/3.png" alt="Logo" />
-            </div>
-          </div>
-          <span>© 2024</span>
-        </div>
-      </div>
-    </div>
 
     <script src="../js/script.js"></script>
   </body>

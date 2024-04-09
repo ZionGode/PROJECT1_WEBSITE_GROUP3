@@ -127,3 +127,30 @@ body div {
   background-color: #064749 !important;
   border-color: #064749 !important;
 }
+
+.footer {
+  padding-top: 12vw;
+  padding-bottom: 4vw;
+}
+
+#copyright {
+margin-top: 5px;
+}
+
+.footer li {
+  margin-bottom: 7px; /* Or any other value you prefer */
+}
+
+.footer h5 {
+  font-weight: 600;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+}
+
+#footer-icon {
+  color: #064749;
+  padding-right: 10px;
+}
