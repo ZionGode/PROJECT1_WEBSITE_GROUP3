@@ -176,11 +176,11 @@ body div {
 }
 
 .crop-img {
-  width: 150px; /* Correct width set to 300px */
-  height: 150px; /* Correct height set to 300px */
-  object-fit: cover; /* Ensure the image covers the element area */
-  object-position: center; /* Center the image within the element */
-  margin-bottom: 1rem; /* Add some space below each image */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0; /* Remove margin if any */
+    display: block;
 }
 
 /* Adjust the bottom margin of the last image row */
@@ -188,9 +188,16 @@ body div {
   margin-bottom: 2rem; /* Increased space below the last row of images */
 }
 
-/* Ensure that images within the same row are on the same line */
 .showcase-section .row > .col {
-  padding: 0; /* Remove padding from columns to keep images close */
+  padding: 0 !important; /* Important to override Bootstrap's CSS */
+  padding-right: 0; /* Remove right padding from columns to reduce horizontal space */
+  padding-left: 0; /* Remove left padding from columns to reduce horizontal space */
+}
+
+
+/* Add some margin to separate the images slightly if desired */
+.showcase-section .row > .col + .col {
+  margin-left: 2px; /* Slight space between the images, adjust as needed */
 }
 
 /* Additional styling for headings */
