@@ -15,6 +15,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -63,9 +67,11 @@
       <div class="container">
         <div class="collapse navbar-collapse justify-content-center">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Rentals</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
           </ul>
         </div>
@@ -151,6 +157,124 @@
           </p>
         </div>
       </div>
+
+      <div class="container">
+        <div class="search-container">
+          <div class="search-bar">
+            <input type="text" placeholder="Select a city" />
+            <input type="date" placeholder="Move-in" />
+            <input type="date" placeholder="Move-out" />
+            <button
+              type="button"
+              class="decrement"
+              onclick="changeGuestCount(-1)"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="Guests"
+              value="1"
+              min="1"
+            />
+            <button
+              type="button"
+              class="increment"
+              onclick="changeGuestCount(1)"
+            >
+              +
+            </button>
+            <button type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container showcase-section">
+      <div class="row mb-4">
+          <div class="col-12 col-md-6">
+              <div class="row">
+                  <div class="col">
+                      <img src="../img/showcase-img-1.jpg" class="border border-dark-subtle crop-img" alt="Image" />
+                  </div>
+                  <div class="col">
+                      <img src="../img/showcase-img-2.jpg" class="border border-dark-subtle crop-img" alt="Image" />
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <img src="../img/showcase-img-3.jpg" class="border border-dark-subtle crop-img" alt="Image" />
+                  </div>
+                  <div class="col">
+                      <img src="../img/showcase-img-4.jpg" class="border border-dark-subtle crop-img" alt="Image" />
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-6">
+              <h1 class="main-heading">The future is flexible</h1>
+              <p class="sub-heading">
+                  Embrace the freedom of a lifestyle where you are in control. Whether it's for work, leisure, or simply a change of scenery, we're here to make sure your future is as flexible as you need it to be.
+              </p>
+          </div>
+      </div>
+  </div>
+
+      <div class="container feature-section">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <i class="bi bi-house-door-fill icon-feature fa-3x"></i>
+                <!-- Bootstrap icon for flexible living -->
+                <h2 class="feature-heading">Flexible living</h2>
+                <p class="feature-text">
+                  Stay as long or as little as you need with month-to-month
+                  contracts
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature Card 2 -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <i class="bi bi-cursor-fill icon-feature fa-3x"></i>
+                <!-- Bootstrap icon for move-in ready -->
+                <h2 class="feature-heading">Move-in ready</h2>
+                <p class="feature-text">
+                  Ready to move in with everything you need
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature Card 3 -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <i class="bi bi-speedometer2 icon-feature fa-3x"></i>
+                <!-- Bootstrap icon for high-speed Wi-Fi -->
+                <h2 class="feature-heading">High-speed Wi-Fi</h2>
+                <p class="feature-text">
+                  Best in class internet speeds suitable for working from home
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Feature Card 4 -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card feature-card h-100">
+              <div class="card-body">
+                <i class="bi bi-telephone-fill icon-feature fa-3x"></i>
+                <!-- Bootstrap icon for 24/7 support -->
+                <h2 class="feature-heading">24/7 support</h2>
+                <p class="feature-text">On hand team for any issues you have</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Blog posts -->
@@ -225,9 +349,15 @@
             <h6>Dream Rentals</h6>
             <h6>© 2024</h6>
             <!-- Social media icons -->
-            <a href="#"><i class="fab fa-linkedin fa-2x" id="footer-icon"></i></a>
-            <a href="#"><i class="fab fa-facebook-square fa-2x" id="footer-icon"></i></a>
-            <a href="#"><i class="fab fa-twitter fa-2x" id="footer-icon"></i></a>
+            <a href="#"
+              ><i class="fab fa-linkedin fa-2x" id="footer-icon"></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-facebook-square fa-2x" id="footer-icon"></i
+            ></a>
+            <a href="#"
+              ><i class="fab fa-twitter fa-2x" id="footer-icon"></i
+            ></a>
           </div>
           <!-- Second column for Company, Guests, and Privacy links -->
           <div class="col-md-5">
@@ -286,6 +416,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="../js/script.js"></script>
     <script src="../js/carousel.js"></script>
   </body>
 </html>

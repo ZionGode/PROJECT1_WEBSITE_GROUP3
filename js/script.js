@@ -1,10 +1,10 @@
-//Owl Carousel
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:1,
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true
-});
+function changeGuestCount(delta) {
+  var guestInput = document.getElementById('guests');
+  var currentCount = guestInput.value ? parseInt(guestInput.value, 10) : 0;
+  var newCount = currentCount + delta;
+  // If newCount is less than 1 or the input was empty and delta is positive (plus button clicked)
+  if (newCount < 1 || (!currentCount && delta > 0)) {
+      newCount = 1;
+  }
+  guestInput.value = newCount;
+}
