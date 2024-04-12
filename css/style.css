@@ -175,45 +175,78 @@ body div {
 
 }
 
+.showcase-section {
+margin-top: 10vh;
+}
+
 .crop-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin: 0; /* Remove margin if any */
-    display: block;
+  width: 100%; /* Adjust width to fill the container */
+  height: 150px;
+  object-fit: cover;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b3b3b3;
 }
 
-/* Adjust the bottom margin of the last image row */
-.showcase-section .row:last-child {
-  margin-bottom: 2rem; /* Increased space below the last row of images */
+.crop-img-2 {
+  width: 100%;
+  height: 160px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #b3b3b3;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
 }
 
-.showcase-section .row > .col {
-  padding: 0 !important; /* Important to override Bootstrap's CSS */
-  padding-right: 0; /* Remove right padding from columns to reduce horizontal space */
-  padding-left: 0; /* Remove left padding from columns to reduce horizontal space */
+#img-1 {
+  border-radius: 2rem 0 0 0;
 }
 
-
-/* Add some margin to separate the images slightly if desired */
-.showcase-section .row > .col + .col {
-  margin-left: 2px; /* Slight space between the images, adjust as needed */
+#img-2 {
+  margin-left: -24px;
 }
 
-/* Additional styling for headings */
-.showcase-section .main-heading {
-  margin-top: 2rem; /* Add some space above the main heading */
+#img-3 {
+  border-radius: 0 0 0 2rem;
+}
+
+.heading-section {
+  background-color: #dedede;
+  border-radius: 0rem 2rem 2rem 0rem;
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  padding: 40px !important; /* Adjust padding as needed */
+  margin-left: -36px;
+}
+
+.main-heading {
+  text-decoration: solid;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.sub-heading {
+  font-size: small !important;
+}
+
+.title {
+  margin-top: 7rem;
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
+}
+
+/* Feature Section */
+.feature-card {
+  border: none !important;
+  border-radius: 1.5rem !important;
+  background-color: #dedede !important;
 }
 
 .icon-feature {
   font-size: 2rem; /* Adjust icon size as needed */
   margin-bottom: 1rem;
-}
-
-.feature-card {
-  border: none !important;
-  border-radius: 1.5rem !important;
-  background-color: #dedede !important;
 }
 
 .feature-card .card-body {
@@ -247,7 +280,6 @@ body div {
   padding: 4rem 0;
 }
 
-
 /* Card */
 .card-body {
   text-align: center;
@@ -273,6 +305,19 @@ body div {
   color: #fff !important;
   background-color: #064749 !important;
   border-color: #064749 !important;
+}
+
+.booking-shell {
+  background-color: #dedede;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.booking {
+  color: #fff;
+  margin-top: 9rem;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
 }
 
 .footer {
