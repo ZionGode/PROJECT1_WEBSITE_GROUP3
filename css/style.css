@@ -16,6 +16,15 @@ body div {
   color: #064749;
 }
 
+.booking-img {
+  width: 150px !important; /* Adjust width to fill the container */
+  height: 100% !important;
+  object-fit: cover;
+  vertical-align: top;
+  margin-right: 0%;
+  padding-right: 0%;
+}
+
 #category {
   font-size: 18px;
   font-weight: 550;
@@ -114,6 +123,15 @@ body div {
   transform: translate(-50%, -50%);
   z-index: 100;
   width: 80%; /* Adjust width as necessary */
+  border-radius: 0.5rem;
+}
+
+.search-container-2 {
+  max-width: 100%;
+  margin: auto;
+  padding: 0.7rem;
+  background-color: #f4f4f4;
+  border-radius: 0.5rem;
 }
 
 .search-bar {
@@ -175,8 +193,30 @@ body div {
 
 }
 
+.booking-img{
+  width: 200px;
+}
+
+.list-group-item {
+  margin-left: -38px !important;
+  width: 100%;
+}
+
+.list-group-item .list-group-item-action {
+  padding-bottom: 17px;
+  width: none;
+}
+
 .showcase-section {
 margin-top: 10vh;
+}
+
+#google-maps-canvas img.text-marker {
+  max-width: none !important;
+  background: none !important;
+}
+img {
+  max-width: none;
 }
 
 .crop-img {

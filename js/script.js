@@ -8,3 +8,17 @@ function changeGuestCount(delta) {
   }
   guestInput.value = newCount;
 }
+
+$(document).ready(function(){
+  $('#sortOptions').change(function(){
+      // Sorting logic here
+  });
+
+  $('#filtersForm input').on('change', function() {
+      // Filter logic here
+      // Example:
+      var filterValues = $('#filtersForm').serialize(); // This will give you a string of "name=value" pairs representing checked boxes
+      console.log(filterValues);
+      // Implement your filtering functionality based on checked options
+  });
+});

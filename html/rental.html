@@ -60,6 +60,11 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -67,12 +72,16 @@
       <div class="container">
         <div class="collapse navbar-collapse justify-content-center">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Rentals</a></li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacts</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -80,142 +89,190 @@
 
     <!-- Main Content -->
 
-    <!-- Logo -->
-    <div class="container p-5 text-center">
-      <a href="#" class="text-dark link-underline link-underline-opacity-0">
-        <h1 id="logo">Dream Rentals</h1>
-      </a>
+    <div class="container mt-5">
+      <div class="search-container-2">
+        <div class="search-bar">
+          <input type="text" placeholder="Select a city" />
+          <input type="date" placeholder="Move-in" />
+          <input type="date" placeholder="Move-out" />
+          <button
+            type="button"
+            class="decrement"
+            onclick="changeGuestCount(-1)"
+          >
+            -
+          </button>
+          <input
+            type="number"
+            id="guests"
+            name="guests"
+            placeholder="Guests"
+            value="1"
+            min="1"
+          />
+          <button type="button" class="increment" onclick="changeGuestCount(1)">
+            +
+          </button>
+          <button type="submit">Search</button>
+        </div>
+      </div>
     </div>
 
-    <!-- Category buttons -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container pb-2">
-        <div class="collapse navbar-collapse justify-content-center">
-          <div class="btn-group justify-content-center" role="group">
-            <ul>
-              <a type="button" class="btn" id="category"> View all</a>
-            </ul>
-            <ul>
-              <a type="button" class="btn" id="category"> Destination guide</a>
-            </ul>
-            <ul>
-              <a type="button" class="btn" id="category"> Remote working</a>
-            </ul>
-            <ul>
-              <a type="button" class="btn" id="category"> Property investing</a>
-            </ul>
-            <ul>
-              <a type="button" class="btn" id="category"> Property insights</a>
-            </ul>
+    <div class="container mt-3">
+      <div class="row mb-3">
+        <div class="col-12 col-md-5 d-flex justify-content-end pb-3">
+          <!-- Filters -->
+          <button
+            class="btn btn-outline-secondary me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#filtersCollapse"
+            aria-expanded="false"
+            aria-controls="filtersCollapse"
+          >
+            Filters
+          </button>
+          <div class="collapse" id="filtersCollapse">
+            <!-- Insert filter options here -->
+            <div class="card card-body">
+              <form id="filtersForm">
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="parking"
+                      id="filterParking"
+                    />
+                    <label class="form-check-label" for="filterParking">
+                      Parking
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="pool"
+                      id="filterPool"
+                    />
+                    <label class="form-check-label" for="filterPool">
+                      Pool
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="extraRoom"
+                      id="filterExtraRoom"
+                    />
+                    <label class="form-check-label" for="filterExtraRoom">
+                      Extra Room
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="fullSpace"
+                      id="filterFullSpace"
+                    />
+                    <label class="form-check-label" for="filterFullSpace">
+                      Full Space
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Sorting Dropdown -->
+          <select class="form-select" id="sortOptions">
+            <option selected>Sort by: Availability</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <p class="lead">52 results for "1 Bedroom property in Toronto"</p>
           </div>
         </div>
       </div>
-    </nav>
 
-    <div class="carousel-wrapper">
-      <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="../img/carousel-img-1.jpg" alt="..." />
-        </div>
-        <div class="item">
-          <img src="../img/carousel-img-2.jpg" alt="..." />
-        </div>
-        <div class="item">
-          <img src="../img/carousel-img-3.jpg" alt="..." />
-        </div>
-      </div>
-
-      <div class="card" id="card-carousel">
-        <div class="card-body">
-          <h1 class="card-title">Home away from home</h1>
-          <p class="card-text">
-            Embrace the comfort of a personalized retreat in settings that resonate with relaxation and tranquility.
-          </p>
-        </div>
-      </div>
-
+      <!-- Listings -->
       <div class="container">
-        <div class="search-container">
-          <div class="search-bar">
-            <input type="text" placeholder="Select a city" />
-            <input type="date" placeholder="Move-in" />
-            <input type="date" placeholder="Move-out" />
-            <button
-              type="button"
-              class="decrement"
-              onclick="changeGuestCount(-1)"
-            >
-              -
-            </button>
-            <input
-              type="number"
-              id="guests"
-              name="guests"
-              placeholder="Guests"
-              value="1"
-              min="1"
-            />
-            <button
-              type="button"
-              class="increment"
-              onclick="changeGuestCount(1)"
-            >
-              +
-            </button>
-            <button type="submit">Search</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Showcase Section -->
-    <div class="container showcase-section">
-      <div class="row justify-content-md-center">
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col">
-              <img
-                src="../img/showcase-img-1.jpg"
-                class="crop-img"
-                id="img-1"
-                alt="Image"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="../img/showcase-img-2.jpg"
-                class="crop-img"
-                id="img-2"
-                alt="Image"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <img
-                src="../img/showcase-img-3.jpg"
-                class="crop-img"
-                id="img-3"
-                alt="Image"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="../img/showcase-img-4.jpg"
-                class="crop-img"
-                id="img-2"
-                alt="Image"
-              />
+        <div class="row">
+          <div class="col-8">
+            <div class="list-group">
+              <!-- Repeat this block for each property -->
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="../img/booking-1.jpg"
+                    class="booking-img img-fluid"
+                    alt="Room Image"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-3">Rhoncus suscipit - 1 Bedroom</h5>
+                      <small>from $2490/month</small>
+                    </div>
+                    <span class="material-symbols-outlined">bed</span
+                    ><span>1 Bedroom &nbsp;</span>
+                    <span class="material-symbols-outlined">bathtub</span
+                    ><span>2Bath &nbsp;</span>
+                    <span class="material-symbols-outlined">wifi</span
+                    ><span>Wifi &nbsp;</span>
+                    <p class="mb-1">3rd Floor | Parking | Pool</p>
+                    <small>Available: 28 May 2024</small>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat this block for each property -->
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="../img/booking-1.jpg"
+                    class="booking-img img-fluid"
+                    alt="Room Image"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-3">Rhoncus suscipit - 1 Bedroom</h5>
+                      <small>from $2490/month</small>
+                    </div>
+                    <span class="material-symbols-outlined">bed</span
+                    ><span>1 Bedroom &nbsp;</span>
+                    <span class="material-symbols-outlined">bathtub</span
+                    ><span>2Bath &nbsp;</span>
+                    <span class="material-symbols-outlined">wifi</span
+                    ><span>Wifi &nbsp;</span>
+                    <p class="mb-1">3rd Floor | Parking | Pool</p>
+                    <small>Available: 28 May 2024</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 heading-section">
-          <h1 class="main-heading">The future is flexible</h1>
-          <p class="sub-heading">
-            Embrace the freedom of a lifestyle where you are in control. Whether
-            it's for work, leisure, or simply a change of scenery, we're here to
-            make sure your future is as flexible as you need it to be.
-          </p>
+          <div class="col-auto">
+            <div class="map_container">
+              <iframe
+                style="height: 100%; width: 100%; border: 0"
+                frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=Toronto,+ON,+Canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              ></iframe>
+            </div>
+            <a
+              class="google-maps-html"
+              rel="nofollow"
+              href="https://kbj9qpmy.com/bp"
+              id="grab-maps-authorization"
+            ></a>
+          </div>
         </div>
       </div>
     </div>
@@ -342,11 +399,11 @@
 
     <div class="container-fluid booking-shell">
       <div class="container booking">
-          <h1 class="pb-2">Bespoke spaces</h1>
-          <p>
-            Expertly designed to create extraordinary spaces with the flexible
-            renter in mind.
-          </p>
+        <h1 class="pb-2">Bespoke spaces</h1>
+        <p>
+          Expertly designed to create extraordinary spaces with the flexible
+          renter in mind.
+        </p>
         <div class="row mt-4 pt-5">
           <div class="col">
             <a href="rental.html" class="btn btn-primary">Start booking</a>
