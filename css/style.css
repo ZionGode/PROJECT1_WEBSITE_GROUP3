@@ -18,11 +18,26 @@ body div {
 
 .booking-img {
   width: 150px !important; /* Adjust width to fill the container */
-  height: 100% !important;
+  height: 139.5px !important;
   object-fit: cover;
   vertical-align: top;
   margin-right: 0%;
   padding-right: 0%;
+}
+
+.map_container iframe {
+  height: 450px; 
+  width: 100%; 
+  border: 0;
+}
+
+.booking-btn {
+  margin-left: 600px !important;
+  margin-top: 50px !important;
+}
+
+.booking-sum {
+  margin-top: 200px !important;
 }
 
 #category {
