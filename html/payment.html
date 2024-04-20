@@ -66,7 +66,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <div class="collapse navbar-collapse justify-content-center">
@@ -74,7 +73,7 @@
             <li class="nav-item">
               <a class="nav-link" href="home.html">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="rental.html">Rentals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Rentals</a></li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
@@ -86,42 +85,30 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row mb-3">
-        <div class="col-md-auto mt-4">
-          <img src="../img/toronto.jpg" class="property-img img-fluid" />
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="mb-4">Booking Review</h1>
+          <div class="bordered-container">
+            <!-- Placeholder for Booking Details -->
+            <ul class="list-group-flush">
+              <li class="list-group-item py-3 fw-bold">Rent per month: <span class="float-end">$2990.00</span></li>
+              <li class="list-group-item py-3">Utilities per month: <span class="float-end">$250.70</span></li>
+              <li class="list-group-item py-3 fw-bold">Monthly subtotal: <span class="float-end">$3340.70</span></li>
+              <li class="list-group-item py-3">One-time cleaning fee: <span class="float-end">$225.00</span></li>
+              <li class="list-group-item py-3 fw-bold">Total charges: <span class="float-end">$3340.70</span></li>
+              <li class="list-group-item py-3 fw-bold">Total: <span class="float-end">$4225.00</span></li>
+          </ul>
+            <button class="btn btn-primary mt-4 mb-4">Confirm and pay</button>
+            <p>You won't be charged yet</p>
+          </div>
         </div>
-        <div class="mb-3 mt-4 ">
-          <button class="btn btn-primary">View all photos</button>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-md-8">
-          <!-- Property Details -->
-          <h2>Elegant Downtown Retreat</h2>
-          <p>Toronto, Entertainment District</p>
-          <p>
-            2 bedroom | 2 baths | 750 sq ft | Skyline view | High Floor | Access
-            to Gym
-          </p>
-          <!-- Description -->
-          <h3>Description</h3>
-          <p>
-            An urban oasis set in the heart of Toronto's vibrant Entertainment
-            District. This luxurious two-bedroom condo offers panoramic city
-            views, modern furnishings, and access to premium building amenities
-            including a state-of-the-art gym and an infinity pool. Experience
-            Toronto's finest, from upscale dining and shopping to world-class
-            theatres and cultural venues, all just steps away.
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          <!-- Booking Details -->
+        <div class="col-md-5">
+          <img src="../img/toronto.jpg" class="img-fluid rounded" />
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">$3990 / Month</h3>
+              <div class="payment-image">
+              </div>
               <form>
                 <div class="mb-3">
                   <label for="moveIn" class="form-label">Move In</label>
@@ -131,7 +118,6 @@
                   <label for="moveOut" class="form-label">Move Out</label>
                   <input type="date" class="form-control" id="moveOut" />
                 </div>
-                <!-- Additional form fields here -->
                 <div class="mb-3">
                   <label for="guests" class="form-label">Guests</label>
                   <select class="form-select" id="guests">
@@ -141,10 +127,16 @@
                     <!-- More options here -->
                   </select>
                 </div>
-                <a href="payment.html" class="btn btn-primary text-white text-decoration-none">
-                  Continue booking
-                </a>
               </form>
+              <div class="p-3 text-start">
+                <p class="mb-1">Payment Timeline</p>
+                <!-- Replace the placeholders below with your actual data -->
+                <p class="mb-1">Reserve this apartment: $401.70</p>
+                <p class="mb-1">Due now</p>
+                <p class="mb-1">
+                  After move-out: Recover your $X deposit back within 30 days.
+                </p>
+              </div>
             </div>
           </div>
         </div>
